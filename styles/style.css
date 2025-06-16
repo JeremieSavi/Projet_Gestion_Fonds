@@ -7,7 +7,8 @@
     list-style: none;
 }
 .div_nav h2 span {
-    color:rgb(0, 140, 255);
+    color:rgb(0, 140, 255); 
+    
 }
 nav{
     position: fixed;
@@ -19,6 +20,7 @@ nav{
     align-items: center;
     padding:20px;
     background-color: rgb(34, 219, 219);
+    background-color:rgba(255, 255, 255, 0.888);
     border-bottom-left-radius: 20px;
     border-bottom-right-radius: 20px;
     color: #02016f;
@@ -36,8 +38,8 @@ nav{
     transition:color .4s;
 }
 .nav_links li a:hover{
-    /* color:rgb(0, 140, 255); */
-    color: aliceblue;
+    color:rgb(0, 140, 255); 
+    /* color: aliceblue; */
 
 }
 .Connexion_button{
@@ -58,6 +60,6 @@ nav{
 }
 .Inscription_button:hover{
     background-color: rgb(0, 140, 255,.8);
-    
+
 
 }
