@@ -1,0 +1,147 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page de connection</title>
+     <link rel="stylesheet" href="index.html">
+     <link rel="stylesheet" href="style.css">
+     
+</head>
+<body>
+    <!--
+    <h2>Se connecter</h2>
+    <div class="conn">
+    <form action="">
+        <label for="">Email:</label>
+        <input type="email">
+        <label for="">Mot de passe:</label>
+        <input type="password"><br>
+        <button type="submit">Connexion</button>
+        
+    </form>
+    </div> 
+    -->
+
+    
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f0f2f5;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .login-container {
+      background: #fff;
+      padding: 30px;
+      border-radius: 10px;
+      width: 350px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.1);
+    }
+
+    .login-container h2 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .login-container input[type="email"],
+    .login-container input[type="password"] {
+      width: 100%;
+      padding: 12px;
+      margin: 10px 0;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      box-sizing: border-box;
+    }
+
+    .login-container .remember {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 13px;
+    }
+
+    .login-container .remember label {
+      display: flex;
+      align-items: center;
+    }
+
+    .login-container button[type="submit"] {
+      width: 100%;
+      padding: 12px;
+      background-color: #007bff;
+      color: #fff;  
+      border: none;
+      border-radius: 5px;
+      margin-top: 15px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+
+    .login-container .google-btn {
+      width: 100%;
+      padding: 12px;
+      background-color: white;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      margin-top: 10px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 15px;
+      cursor: pointer;
+    }
+
+    .login-container .google-btn img {
+      width: 20px;
+      margin-right: 8px;
+    }
+
+    .login-container .signup {
+      text-align: center;
+      margin-top: 15px;
+      font-size: 14px;
+    }
+
+    .login-container a {
+      color: #007bff;
+      text-decoration: none;
+    }
+
+    .login-container a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+  <form class="login-container" method="post" action="traitement_connexion.php">
+    <h2>Se connecter</h2>
+
+    <input type="email" name="email" placeholder="Email" required>
+    <input type="password" name="mot_de_passe" placeholder="Mot de passe" required>
+
+    <div class="remember">
+      <label><input type="checkbox" name="remember"> Se souvenir de moi</label>
+      <a href="#">Mot de passe oublié ?</a>
+    </div>
+
+    <button type="submit">Se connecter</button>
+
+    <button type="button" class="google-btn">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/4/4a/Logo_2013_Google.png" alt="Google logo">
+      Continuer avec Google
+    </button>
+
+    <div class="signup">
+      Pas encore de compte ? <a href="#">S’inscrire</a>
+    </div>
+  </form>
+
+</body>
+</html>
+</body>
+</html>

@@ -12,9 +12,17 @@ body{
     min-height: 100vh;
     background: rgba(245, 245, 245, 0.765);
 }
+
 #header{
-    display:inline-flex;
+   
+    min-height: 100vh;
+    margin-top: 10%;
     
+}
+
+
+#header  div{
+  display: flex;
 }
 #header .static-txt{
     color:rgb(1, 1, 108) ;
@@ -29,7 +37,6 @@ body{
     height: 90px;
     line-height: 90px;
     overflow: hidden;
-    margin: 16px;
     
 }
 .dynamic-txts li{
@@ -38,17 +45,15 @@ body{
     font-size: 60px;
     font-weight: 500;
     position: relative;
+    white-space: nowrap;
+     overflow: hidden;
     top: 0;
-    animation: slide 6s steps(4) infinite;
+    animation: typewriter 4s steps(4) infinite;
 }
-@keyframes slide {
+@keyframes typewriter {
     100%{
         top: -360px;
     }
-}
-
-.dynamic-txts li span{
-    position: relative;
 }
 
 .dynamic-txts li span::after{
@@ -57,7 +62,7 @@ body{
     left:0;
     height: 100%;
     width: 100%;
-    background:white;
+    background:whitesmoke;
     border-left:5px solid ;
     animation: typing 6s steps(10) infinite;
 } 
@@ -141,4 +146,24 @@ p{
 }
 .bu:hover{
  background-color:#e6f0ff; 
+}
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: 24px; /* Ajuste la taille principale */
+  }
+
+  .dynamic-txts-wrapper {
+    height: 1em; /* Plus petit pour les petits écrans */
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 18px;
+  }
+
+  .dynamic-txt-wrapper {
+    width: 8ch; /* Réduit la largeur des mots */
+  }
 }
