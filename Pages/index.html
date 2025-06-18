@@ -11,6 +11,22 @@
     
     <main>
         <!-- ===== BARRE DE NAVIGUATION ===== -->
+
+
+        <!-- Fonctions javaScript pour l'afficher ou cacher   la sidebar -->
+         <script>
+            function AfficherSidebar(){
+                let sidebar=document.querySelector('.sidebar_links')
+                sidebar.style.display="flex"
+            }
+            function CacherSidebar(){
+                let sidebar=document.querySelector('.sidebar_links')
+                sidebar.style.display="none"
+            }
+
+         </script>
+        
+
          <!-- <nav id="nav"> -->
             <div class="div_nav">
                 <h2>Fund<span>Manage </span></h2>
@@ -22,8 +38,18 @@
                 <div class="div_ins_con">
                     <a href="#" class="Connexion_button" >Connexion</a>
                     <a href="#" class="Inscription_button">S'inscrire</a>
-                    <img class="icon_menu" src="../assets/icon_menu.svg" alt="Icône du menu">
+                     <a href="#" onclick="AfficherSidebar()"> <img class="icon_menu" src="../assets/icon_menu.svg" alt="Icône du menu"> </a>
                 </div>
+                
+                <ul class="sidebar_links" >       
+                        <li  onclick="CacherSidebar()" ><a href="#"  ><img class="icon_croix" src="../assets/menu_croix.png" alt=""></a></li>
+                        <li><a href="#">Accueil</a></li>
+                        <li><a href="#">Fonctionnalités</a></li>
+                        <li><a href="#">Témoignages</a></li>
+                        <li><a href="#">Se connecter</a></li>
+                        <li><a href="#">S'inscrire</a></li>
+                </ul>
+                  
             </div>
 
 
