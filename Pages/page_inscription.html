@@ -4,8 +4,100 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Inscription_FundManage</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        a{
+            cursor: pointer;
+        }
+        form{
+            padding-top: 0px;
+            display: flex;
+            flex-direction: column;
+            
+        }
+        form h1 {
+            margin-bottom:10px;
+        }
+        form input{
+            margin-bottom:30px;
+        }
+        .div_nom input{
+            margin-right:50px;
+            
+
+        }
+        input{
+            padding:2px;
+        }
+        input:focus{
+            border-color: rgb(140, 85, 196);
+        }
+        
+        .div_nom_prenom{
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+        .div_img_inscription img{
+            width:400px;
+            height:400px;
+            border-radius: 10px;
+        }
+        .container_page_inscription{
+            padding-top: 50px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+            align-items: center;
+
+            
+        }
+        .boutton_envoyer{
+            background-color:  rgb(140, 85, 196);
+            color:white;
+            border: none;
+            padding: 10px 0;
+        }
+    </style>
+
 </head>
 <body>
+
+ <div class="container_page_inscription">
+    <form action="">
+        <h1>Bienvenue</h1>
+        <h4>Remplis ces champs pour t'inscrire  et pour vivre une <br> expérience unique </h4>
+        <div class="div_nom_prenom">
+            <div class="div_nom">
+                <label for="Nom">Nom</label> <br>
+                <input type="text" name="" id="Nom">
+            </div>
+            <div class="div_prenom">
+                <label for="">Prénom</label> <br>
+                <input type="text" name="" id="">
+            </div> 
+        </div>  
+        
+            <label for="">E-mail</label>
+            <input type="email" name="" id="">
+            <label for="">Mot de passe</label>
+            <input type="email" name="" id="">
+            <label for="">Confirmer le mot de passe</label>
+            <input type="password" name="" id="">
+            
+            <button class="boutton_envoyer">S'inscrire</button>
+
+        
+            <p></p>
+           
+    </form>
+    <div class="div_img_inscription" >
+        <img src="../assets/inscription.PNG" alt="image illustrative de l'inscription">
+    </div>
+ </div>
     
 </body>
 </html>
