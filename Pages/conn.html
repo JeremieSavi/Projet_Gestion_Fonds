@@ -1,0 +1,176 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page de connection</title>
+     <link rel="stylesheet" href="index.html">
+     <link rel="stylesheet" href="style.css">
+     
+</head>
+<body>
+    <!--
+    <h2>Se connecter</h2>
+    <div class="conn">
+    <form action="">
+        <label for="">Email:</label>
+        <input type="email">
+        <label for="">Mot de passe:</label>
+        <input type="password"><br>
+        <button type="submit">Connexion</button>
+        
+    </form>
+    </div> 
+    -->
+
+    
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background:rgba(245, 245, 245, 0.765);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .login-container {
+    
+      padding: 30px;
+      
+      
+      box-shadow: 0 0 15px rgba(0,0,0,0.1); 
+    }
+
+    .login-container h2 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .login-container input[type="email"],
+    .login-container input[type="password"] {
+      width: 100%;
+      padding: 12px;
+      margin: 10px 0;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      box-sizing: border-box;
+    }
+
+    .login-container .remember {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 13px;
+    }
+
+    .login-container .remember label {
+      display: flex;
+      align-items: center;
+    }
+
+    .login-container button[type="submit"] {
+      width: 100%;
+      padding: 12px;
+      background-color: rgb(140,85 , 196);
+      color: #fff;  
+      border: none;
+      border-radius: 5px;
+      margin-top: 15px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+
+    .login-container .google-btn {
+      width: 100%;
+      padding: 12px;
+      background-color: white;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      margin-top: 10px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 15px;
+      cursor: pointer;
+    }
+
+    .login-container .google-btn img{
+      width: 50px;
+      margin-right: 8px;
+    }
+
+
+ .google-btn {
+  text-decoration: none;
+  color: #444;
+}
+
+
+
+    .login-container .signup {
+      text-align: center;
+      margin-top: 15px;
+      font-size: 14px;
+    }
+
+    .login-container a {
+      color: #007bff;
+      text-decoration: none;
+    }
+
+    .login-container a:hover {
+      text-decoration: none;
+    }
+    .connexion{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content:space-evenly; 
+    }
+    .connexion img{
+        margin-left: 100px;
+    }
+  </style>
+</head>
+<body>
+    <div class="connexion">
+  <form class="login-container" method="post" action="traitement_connexion.php">
+    <h2>Se connecter</h2>
+
+    <input type="email" name="email" placeholder="Email" required>
+    <input type="password" name="mot_de_passe" placeholder="Mot de passe" required>
+
+    <div class="remember">
+      <label><input type="checkbox" name="remember"> Se souvenir de moi</label>
+      <a href="#">Mot de passe oublié ?</a>
+    </div>
+
+    <button type="submit">Se connecter</button>
+
+    <button type="button" class="google-btn">
+      <a href="https://accounts.google.com/o/oauth2/v2/auth?
+client_id=TON_CLIENT_ID&
+redirect_uri=TON_REDIRECT_URI&
+response_type=code&
+scope=openid%20email%20profile"
+class="google-btn">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/4/4a/Logo_2013_Google.png" alt="Google logo" style="width: 25px;">
+  Continuer avec Google
+</a>
+    </button>
+   
+
+
+    <div class="signup">
+      Pas encore de compte ? <a href="#">S’inscrire</a>
+    </div>
+  </form>
+
+    <div>
+        <img src="assetsy/WhatsApp Image 2025-06-19 à 12.03.04_abda3bf4.jpg " style="width:500px" style="height:500px" alt="page de connexion">
+    </div>
+  </div>
+</body>
+</html>
+</body>
+</html>
