@@ -11,16 +11,19 @@ body{
     justify-content:center;
     min-height: 100vh;
     background: rgba(245, 245, 245, 0.765);
+
 }
 #header{
-    display:inline-flex;
-    
+  margin-top: 10%;
+  min-height: 100vh;
+}
+#header div{
+  display: flex;
 }
 #header .static-txt{
     color:rgb(1, 1, 108) ;
     font-size: 60px;
     font-weight: 400;
-    display: flex;
     margin: 16px;
     
 }
@@ -29,7 +32,7 @@ body{
     height: 90px;
     line-height: 90px;
     overflow: hidden;
-    margin: 16px;
+  
     
 }
 .dynamic-txts li{
@@ -68,7 +71,7 @@ body{
     } 
     
 }
-p{
+#header p{
     margin: 16px;
     padding: 16px;
     font-size: 25px;
@@ -122,7 +125,7 @@ p{
     font-size: 20px;
 }
 
- .bu{
+.bu{
   border-radius: 8px;
   text-align: center;
   padding: 15px;
