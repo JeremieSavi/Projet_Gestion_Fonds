@@ -6,6 +6,9 @@
     text-decoration: none;
     list-style: none;
 }
+a{
+    cursor:pointer;
+}
 main{
     padding-top:110px;
 }
@@ -77,8 +80,11 @@ nav{
         background-color:rgb(255, 255, 255);
         padding-top:20px;
         padding-left: 100px;
-        padding-bottom:20px;
+        padding-bottom:0px;
         padding-right: 100px;
+    }
+    .sidebar_links li,a{
+        transition:all .8s ;
     }
     .sidebar_links li {
         display: flex;
