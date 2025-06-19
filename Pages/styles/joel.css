@@ -18,7 +18,7 @@ body{
     padding-left: 10px;
     padding-right: 10px;
     position: relative;
-    z-index:-2;
+    z-index: -1;
 }
 #featurediv1{
     position: relative;
@@ -34,15 +34,15 @@ body{
     height: 300px;
     box-shadow: 0 4px 8px grey;
 }
-.featurediv2:hover{
+
+/* .featurediv2 :hover{
+    background-color: rgb(3, 3, 255);
+    transform: translateY(-0.7%) ;
+}  */
+.hover :hover{
     background-color: rgb(200, 200, 211);
     transform: translateY(-0.7%) ;
 }
-/* .hover :hover{
-    background-color: rgb(200, 200, 211);
-    transform: translateY(-0.7%) ;
-    
-} */
 #feature h2{
     margin: 60px 0 30px 0;
 }
@@ -169,7 +169,7 @@ body{
 }
 #footer ul li:hover{
     color: rgb(255, 255, 255);
-} */
+} 
 #container{
     display: flex;
     justify-content: space-between;
