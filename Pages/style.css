@@ -28,7 +28,6 @@ body{
     color:rgb(1, 1, 108) ;
     font-size: 60px;
     font-weight: 400;
-    display: flex;
     margin: 16px;
     
 }
@@ -46,11 +45,13 @@ body{
     font-weight: 500;
     position: relative;
     white-space: nowrap;
-     overflow: hidden;
     top: 0;
     animation: typewriter 4s steps(4) infinite;
 }
 @keyframes typewriter {
+   0%{
+    top: 0;
+   }
     100%{
         top: -360px;
     }
@@ -63,13 +64,16 @@ body{
     height: 100%;
     width: 100%;
     background:whitesmoke;
-    border-left:5px solid ;
-    animation: typing 6s steps(10) infinite;
+    border-left:5px solid blue ;
+    animation: typing 1.5s steps(9) infinite;
 } 
 @keyframes typing{
+  0%{
+    left: 0;
+  }
     100%{
         left:100%;
-        margin:0 -35px 0 35px;
+      
     } 
     
 }
@@ -80,6 +84,7 @@ p{
 }
 .buttons {
   display: flex;
+  flex-wrap: wrap;
   gap: 15px;
   margin-top: 20px;
   padding: 16px;
@@ -121,10 +126,11 @@ p{
 .call{
     color: white;
     background:#007bff;
-    padding: 60px;
+    padding: 100px;
     margin-top: 30px;
     text-align: center;
     font-size: 20px;
+
 }
 
  .bu{
@@ -148,13 +154,13 @@ p{
  background-color:#e6f0ff; 
 }
 
-@media (max-width: 768px) {
-  h1 {
-    font-size: 24px; /* Ajuste la taille principale */
+/* @media (max-width: 768px) { */
+  /* h1 { */
+    /* font-size: 24px; /* Ajuste la taille principale 
   }
 
   .dynamic-txts-wrapper {
-    height: 1em; /* Plus petit pour les petits écrans */
+    height: 1em; /* Plus petit pour les petits écrans 
   }
 }
 
@@ -164,6 +170,8 @@ p{
   }
 
   .dynamic-txt-wrapper {
-    width: 8ch; /* Réduit la largeur des mots */
+    width: 8ch; /* Réduit la largeur des mots 
   }
-}
+} */
+
+

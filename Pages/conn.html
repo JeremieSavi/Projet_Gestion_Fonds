@@ -26,7 +26,7 @@
   <style>
     body {
       font-family: Arial, sans-serif;
-      background: #f0f2f5;
+      background:rgba(245, 245, 245, 0.765);
       display: flex;
       align-items: center;
       justify-content: center;
@@ -35,11 +35,11 @@
     }
 
     .login-container {
-      background: #fff;
+    
       padding: 30px;
-      border-radius: 10px;
-      width: 350px;
-      box-shadow: 0 0 15px rgba(0,0,0,0.1);
+      
+      
+      box-shadow: 0 0 15px rgba(0,0,0,0.1); 
     }
 
     .login-container h2 {
@@ -72,7 +72,7 @@
     .login-container button[type="submit"] {
       width: 100%;
       padding: 12px;
-      background-color: #007bff;
+      background-color: rgb(140,85 , 196);
       color: #fff;  
       border: none;
       border-radius: 5px;
@@ -95,10 +95,18 @@
       cursor: pointer;
     }
 
-    .login-container .google-btn img {
-      width: 20px;
+    .login-container .google-btn img{
+      width: 50px;
       margin-right: 8px;
     }
+
+
+ .google-btn {
+  text-decoration: none;
+  color: #444;
+}
+
+
 
     .login-container .signup {
       text-align: center;
@@ -112,12 +120,20 @@
     }
 
     .login-container a:hover {
-      text-decoration: underline;
+      text-decoration: none;
+    }
+    .connexion{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content:space-evenly; 
+    }
+    .connexion img{
+        margin-left: 100px;
     }
   </style>
 </head>
 <body>
-
+    <div class="connexion">
   <form class="login-container" method="post" action="traitement_connexion.php">
     <h2>Se connecter</h2>
 
@@ -132,15 +148,28 @@
     <button type="submit">Se connecter</button>
 
     <button type="button" class="google-btn">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/4/4a/Logo_2013_Google.png" alt="Google logo">
-      Continuer avec Google
+      <a href="https://accounts.google.com/o/oauth2/v2/auth?
+client_id=TON_CLIENT_ID&
+redirect_uri=TON_REDIRECT_URI&
+response_type=code&
+scope=openid%20email%20profile"
+class="google-btn">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/4/4a/Logo_2013_Google.png" alt="Google logo" style="width: 25px;">
+  Continuer avec Google
+</a>
     </button>
+   
+
 
     <div class="signup">
       Pas encore de compte ? <a href="#">S’inscrire</a>
     </div>
   </form>
 
+    <div>
+        <img src="assetsy/WhatsApp Image 2025-06-19 à 12.03.04_abda3bf4.jpg " style="width:500px" style="height:500px" alt="page de connexion">
+    </div>
+  </div>
 </body>
 </html>
 </body>
