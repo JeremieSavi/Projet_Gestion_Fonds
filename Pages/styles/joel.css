@@ -17,6 +17,8 @@ body{
     font-size: larger;
     padding-left: 10px;
     padding-right: 10px;
+    position: relative;
+    z-index:-2;
 }
 #featurediv1{
     position: relative;
@@ -66,8 +68,11 @@ body{
 #avantage h3{
     color: #10005d;
 }
+
+   
 #avantage{
     position: relative;
+    z-index:-2;
     text-align: center;
     /* margin: 0 30px 100px 30px; */
     font-size: larger;
@@ -111,6 +116,9 @@ body{
     padding: 100px 80px 150px 80px;
     background-color: #b5b5ec;
     text-align: center;
+    position:relative;
+    z-index:-2;
+
 }
 #temoignagediv1{
     position: relative;

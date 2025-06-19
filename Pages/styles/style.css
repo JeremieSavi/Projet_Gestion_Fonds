@@ -137,11 +137,12 @@ body{
   color: #007bff;
   border: 2px solid #007bff ;
   position: relative;
-  top: 30px;
+  z-index:0; 
+  top:30px;
   
- 
-  
+   
 }
+
 .bu:hover{
  background-color:#e6f0ff; 
 }
