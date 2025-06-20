@@ -4,16 +4,183 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tableau de bord</title>
+    <!-- Fonction js -->
+
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            text-decoration: none;
+            list-style:none;
+        }
+        .sidebar_tbord{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 200px;
+            height:100vh;
+            gap:10px;
+            
+            position: fixed;
+            top: 0;
+            left: 0;
+            background:rgb(228, 221, 221);
+
+
+        }
+        .sidebar_tbord li{
+            margin:0 10px;
+            margin-right:10px;
+            width: 90%;
+            padding: 5px ;
+            border-radius: 10px;
+
+            background-color: white;
+            display: flex;
+            align-items:center;
+            transition:background .4s;
+           
+        }
+        .sidebar_tbord li:hover{
+            background-color:rgb(26, 231, 231);
+        }
+        .sidebar_tbord li img{
+            width: 30px;
+            height:30px;
+            margin-right: 30px;
+
+
+        }
+
+        .tableau_bord{
+            
+            width:250px;
+            border-top-left-radius: 20px;
+            border-bottom-left-radius:20px;
+            height:100vh;
+            background:rgb(228, 221, 221);
+            padding-right: 50px;
+            
+        }
+        .tableau_bord .container{
+            width: 100VW;
+            height: 100vh;
+            margin-left: ;
+            
+            display: flex;
+            justify-content:flex-start ;
+            background-color: pink;
+
+        }
+        .div_content{
+            width:7                       0vw;
+            height:100vh;
+            position: absolute;
+            top: 0;
+            right: 0;
+            left:200px;
+            background-color: aquamarine;
+        }
+        .div_accueil_tb{
+            display:none;
+            
+            
+
+        }
+        
+            
+        
+        .div_accueil_tb{
+            color: blue;
+        }
+
+
+    </style>
 </head>
 <body>
+<div>
 
+</div>
     <div class="tableau_bord">
-        <ul class="sidebar_tbord">
-            <li><a href="">Accueil</a></li>
+        <div class="container" >
+       
+            <ul class="sidebar_tbord">
+                <li onclick="afficher_content('.div_accueil_tb')"> 
+                    <span>
+                        <img src="assets/page-daccueil_icon.png" alt="">
+                    </span>
+                    <a href="" onclick="afficher_content('.div_accueil_tb')" >
+                       <span> Accueil </span>
+                    </a>
+                </li>
+                <li>
+                    <span>
+                        <img src="assets/depenses_icon.png" alt="">
+                    </span>
 
-        </ul>
-        
-    </div>
-    
+                    <a href="" onclick="afficher_content('div_depenses_tb')">Dépenses</a>
+                </li>
+                <li>
+                    <span>
+                        <img src="assets/objectifs-financiers_icon.png" alt="">
+                    </span>
+
+                    <a href="">Objectifs</a
+                        ></li>
+                <li>
+                    <span>
+                        <img src="assets/rapport_icone.png" alt="">
+                    </span>
+
+                    <a href="">Rapports</a>
+                </li>
+                <li>
+                    <span>
+                        <img src="assets/conseils_icon.png" alt="">
+                    </span>
+
+                    <a href="">Conseils</a>
+                </li>
+                <li>
+                    <span>
+                        <img src="assets/parametres_icon.png" alt="">
+                    </span>
+
+                    <a href="">Paramètres</a>
+                </li>
+
+            </ul>
+            <div class="div_content">
+                <div class=" div_tb div_accueil_tb">
+                    <h1>ACCUEIL</h1>
+                </div>
+                
+                <div class="div_tb div_depenses_tb">
+                    <h1>Ici s'affiche les dépenses</h1>
+                </div>
+                
+                <div class="div_tb div_accueil_tb">
+                    <h1>ACCUEIL</h1>
+                </div>
+                
+                <div class="div_tb div_accueil_tb">
+                    <h1>ACCUEIL</h1>
+                </div>
+                
+
+            </div>
+                     
+       </div>
+
+            <script>
+        function afficher_content(a){
+            let lui=document.querySelector('a');
+            lui.style.display='block'
+
+        }    
+    </script>
+   
 </body>
 </html>
