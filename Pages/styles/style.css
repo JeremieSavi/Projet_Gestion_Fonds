@@ -1,4 +1,89 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+    *{
+        margin: 0;
+        padding: 0;
+        font-family: 'Poppins', sans-serif;
+        box-sizing: border-box;
+    }
+    body{
+        /* display: flex; */
+        align-items: center;
+        justify-content:center;
+        min-height: 100vh;
+        background: rgba(245, 245, 245, 0.765);
+    }
+    #header{
+   
+    min-height: 100vh;
+    margin-top: 10%;
+    
+    }#header .static-txt{
+    color:rgb(1, 1, 108) ;
+    font-size: 60px;
+    font-weight: 400;
+    margin: px;
+   
+    
+    
+    }
+
+    .wrapper{ 
+        display:inline-flex;
+        padding-left: 16px;
+        margin-left: 16px;
+    }
+
+    .wrapper .dynamic-txts{
+        margin-left: 20px;
+        height: 90px;
+        line-height: 90px;
+        overflow: hidden;
+        padding-top: 5px;
+            
+    }
+    .dynamic-txts li{
+        color: blue;
+        list-style: none;
+        font-size: 60px;
+        font-weight: 500;
+        position: relative;
+        top: 0;
+        animation:slide 6s steps(4) infinite;
+    }
+    @keyframes slide {
+        100%{
+            top: -360px;
+        }
+    }
+    .dynamic-txts li span{
+        position:relative;
+    }
+
+    .dynamic-txts li span::after{
+        content: "";
+        position:absolute;
+        left:0;
+        height: 100%;
+        width: 100%;
+        background: white;
+        border-left:5px solid blue;
+        animation: typing 1.5s steps(10) infinite;
+    } 
+    @keyframes typing{
+        100%{
+            left:100%;
+            margin:0 -35px 0 35px;
+        } 
+    }
+
+
+
+
+
+
+
+
 *{
     padding: 0;
     margin: 0;
@@ -22,10 +107,10 @@ body{
 }
 
 
-#header  div{
+/* #header  div{
   display: flex;
-}
-#header .static-txt{
+} */
+/* #header .static-txt{
     color:rgb(1, 1, 108) ;
     font-size: 60px;
     font-weight: 400;
@@ -77,7 +162,7 @@ body{
       
     } 
     
-}
+} */
 #header p{
     margin: 16px;
     padding: 16px;
@@ -153,6 +238,30 @@ body{
 .bu:hover{
  background-color:#e6f0ff; 
 }
+
+
+
+
+@media (max-width: 768px)  {
+  .wrapper{
+    font-size: 1000px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* @media (max-width: 768px) { */
   /* h1 { */
