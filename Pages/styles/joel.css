@@ -11,7 +11,7 @@ body{
 /* ===========section feature============== */
 
 #feature{
-    
+
     text-align: center;
     margin: 0 30px 100px 30px;
     font-size: larger;
@@ -69,7 +69,7 @@ body{
     color: #10005d;
 }
 
-   
+
 #avantage{
     position: relative;
     z-index:-2;
@@ -113,18 +113,19 @@ body{
 /* =========section temoignage========= */
 
 #temoignage{
-    padding: 100px 80px 150px 80px;
+    /* padding: 100px 80px 70px 80px; */
     background-color: #b5b5ec;
     text-align: center;
     position:relative;
     z-index:-2;
+    padding:100px 40px;
 
 }
 #temoignagediv1{
     position: relative;
     display: flex;
     gap: 20px;
-    margin-top: 70px;
+    margin-top:70px;
 }
 .temoignagediv2{
     position: relative;
@@ -143,6 +144,21 @@ body{
     display: flex;
     flex-direction: column;
     gap: 10px;
+    /* padding:0px 40px; */
+    padding-bottom:60px;
+    
+
+}
+.temoignagediv2{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap:10px;
+    background-color: white;
+    padding:10px;
+    border-radius: 10px;
 }
 }
 
@@ -169,7 +185,7 @@ body{
 }
 #footer ul li:hover{
     color: rgb(255, 255, 255);
-} 
+}
 #container{
     display: flex;
     justify-content: space-between;
@@ -186,7 +202,7 @@ body{
     flex-direction: column;
     gap: 10px;
     justify-content: center;
-    
+
 }
     #container{
         display: flex;

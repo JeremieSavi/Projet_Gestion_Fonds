@@ -73,8 +73,7 @@ nav{
         top:80px;
         left:0;
         right: 0;
-        height:100vh;
-        
+        height:100vh;       
         display:none;
         flex-direction: column;
         background-color:rgb(255, 255, 255); 
