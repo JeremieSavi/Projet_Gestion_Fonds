@@ -158,18 +158,19 @@
 </head>
 <body>
     <div class="connexion">
-  <form class="login-container" method="post" action="traitement_connexion.php">
+  <form class="login-container" method="post" action="">
     <h2>Se connecter</h2>
 
-    <input type="email" name="email" placeholder="Email" required>
-    <input type="password" name="mot_de_passe" placeholder="Mot de passe" required>
+    <input type="email" name="email" placeholder="Email" >
+    <input type="password" name="mot_de_passe" placeholder="Mot de passe" >
 
     <div class="remember">
       <label><input type="checkbox" name="remember"> Se souvenir de moi</label>
       <a href="#">Mot de passe oublié ?</a>
     </div>
-
+    <!-- Redirection de le tableau de bord -->
     <button type="submit">Se connecter</button>
+    <a href="tableau_de_bord.html">Voir le tableau de bord</a>
 
     <button type="button" class="google-btn">
       <a href="#"
