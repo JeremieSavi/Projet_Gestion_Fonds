@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="styles/style.css">
     <link rel="stylesheet" href="styles/joel.css">
     <link rel="stylesheet" href="styles/style_navbar.css">
+    <link rel="stylesheet" href="conn.html">
 </head>
 <body>
     <html lang="en">
@@ -36,6 +37,47 @@
         <!-- ===== BARRE DE NAVIGUATION ===== -->
 
          <!-- </nav>-->
+ <!-- Fonctions javaScript pour l'afficher ou cacher   la sidebar -->
+        <script>
+            function AfficherSidebar(){
+                let sidebar=document.querySelector('.sidebar_links')
+                sidebar.style.display="flex"
+            }
+            function CacherSidebar(){
+                let sidebar=document.querySelector('.sidebar_links')
+                sidebar.style.display="none"
+            }
+
+        </script>
+        
+        <!-- ===== BARRE DE NAVIGUATION ===== -->
+        <nav id="nav">
+            <div class="div_nav">
+                <h2>Fund<span>Manage </span></h2>
+                <ul class="nav_links">
+                    <li><a href="#">Accueil</a></li>
+                    <li><a href="#feature">Fonctionnalités</a></li>
+                    <li><a href="#">Témoignages</a></li>
+                </ul>
+                <div class="div_ins_con">
+                    <a href="#" class="Connexion_button" >Connexion</a>
+                    <a href="page_inscription.html" class="Inscription_button">S'inscrire</a>
+                     <a href="#" onclick="AfficherSidebar()"> <img class="icon_menu" src="assets/icon_menu.svg" alt="Icône du menu"></a>
+                </div>
+                
+                <ul class="sidebar_links" >       
+                        <li  onclick="CacherSidebar()" ><a href="#"  ><img class="icon_croix" src="assets/menu_croix.png" alt=""></a></li>
+                        <li><a href="#">Accueil</a></li>
+                        <li><a href="#">Fonctionnalités</a></li>
+                        <li><a href="#">Témoignages</a></li>
+                        <li><a href="">Se connecter</a></li>
+                        <li><a href="page_inscription.html">S'inscrire</a></li>
+                </ul>
+                  
+            </div>
+
+
+        </nav> 
 
 
            <!-- Header-->
@@ -49,37 +91,280 @@
                             <li><span>Revenus</span></li>
                             <li><span>Objectifs</span></li>
                 
-            </ul>
+                         </ul>
 
-            <div class="static-txt">, savoir vivre</div>
-        </div>                 
-           <p>Prenez le contrôle de vos finances personnelles avec
-            notre plateforme intuitive.<br>
-            Suivez vos dépenses , fixez 
-            des objectifs et prenez des décisions financières éclairées.
-           </p>
+                       <div class="static-txt">, savoir vivre</div>
+                    </div>                 
+                <p>Prenez le contrôle de vos finances personnelles avec
+                    notre plateforme intuitive.<br>
+                    Suivez vos dépenses , fixez 
+                    des objectifs et prenez des décisions financières éclairées.
+                </p>
            <div class="buttons">
-            <a href="page_inscription.html" class="btn-primary">S'inscrire gratuitement</a>
-            <a href="conn.html" class="btn-secondary">Se connecter</a>
+                <a href="page_inscription.html" class="btn-primary">S'inscrire gratuitement</a>
+                <a href="conn.html" class="btn-secondary">Se connecter</a>
            </div>
         </header>
     
-
+         </main>
 
      <!-- ===== Section call to action ===== -->
 
 
         <div class="call">
-            <h1>Prêt à prendre le contrôle de vos finances?</h1>
+            <h1>Prêt à prendre le contrôle de vos finances?</h1> <br>
             <div>Rejoignez des milliers d'utilisateurs qui ont transformé leur
                 relation avec l'argent grâce à notre plateforme.
-                <a href="page_inscription.html" class="bu">Commencer gratuitement</a>
+            </div><br>
+
+             <div><a href="page_inscription.html" class="bu">Commencer gratuitement</a></div>
+        </div>
+
+    
+
+
+
+        <!-- =================section feature====================== -->
+
+
+
+        <section id="feature">
+            <h2>Fonctionnalités principales</h2>
+            <div id="featurediv1">
+
+
+                <div class="hover">
+                    <div class="featurediv2">
+                        <img src="assets/im1.png" alt="" class="imgfeacture">
+                        <h3>Suivi des dépenses</h3>
+                        <p>Visualisez et catégorisez facilement toutes vos dépenses pour identifier les tendances et les opportunités d'économies.</p>
+                    </div>
+                </div>
+
+
+                <div class="hover">
+                    <div class="featurediv2">
+                        <img src="assets/im2.PNG" alt="" class="imgfeacture">
+                        <h3>Objectifs financiers </h3>
+                        <p>Définissez des objectifs d'épargne personnalisés et suivez votre progression pour atteindre vos rêves financiers</p>
+                    </div>
+                </div>
+
+
+                <div class="hover">
+                    <div class="featurediv2">
+                            <img src="assets/im3.PNG" alt="" class="imgfeacture">
+                            <h3>Rapports détaillés</h3>
+                           <p>Accédez à des analyses approfondies de vos finances avec des graphiques interactifs et des recommandations personnalisées.</p>
+                    </div>
+                </div>
+                                  
+
+                    
+                <div class="hover">
+                    <div class="featurediv2">
+                            <img src="assets/im4.PNG" alt="" class="imgfeacture">
+                            <h3>Gestion des Revenus</h3>
+                            <p>Ajout des sources de revenus (salaires, activités annexes, dons...)</p>
+                    </div>
+                </div>
+
+
+                <div class="hover">
+                        <div class="featurediv2">
+                            <img src="assets/im5.PNG" alt="" class="imgfeacture">
+                            <h3>Conseiller Financier Intégré</h3>
+                            <p>Suggestions personnalisées : ajustement des dépenses, opportunités d’économie.</p>
+                        </div>
+                </div>
+
+
+                <div class="hover">
+                        <div class="featurediv2">
+                            <img src="assets/im6.PNG" alt="" class="imgfeacture">
+                            <h3>Discipline financière et motivation</h3>
+                            <p>Mode discipline : restrictions volontaires sur certaines catégories.</p>
+                        </div>
+                </div>
+             </div>
+        </section>    
+
+
+
+        
+
+
+       <!-- ===== Section call to action (a prendre le controle de vos finances) ===== -->
+
+        <section>
+            <div class="call">
+                <h1>Prêt à prendre le contrôle de vos finances?</h1> <br>
+                <div>Rejoignez des milliers d'utlisateurs qui ont transformé leur
+                    relation avec l'argent grâce à notre plateforme.<br>
+                </div> 
+                <div>
+                <a href="#" class="bu">Commencer gratuitement</a>
+                </div>
+            </div>
+        </section>
+        
+
+        
+
+
+
+        <!-- =============section Avantage============ -->
+
+        <section id="avantage">
+            <h2>Adopter Gestion de fond</h2>
+            <p>C’est donner à vos équipes commerciales, marketing et administratives <br> les moyens d'être efficaces !</p>
+            <div id="avantagediv1">
+
+
+                <div class="avantagediv2">
+                    <img src="assets/ii.PNG" alt="" class="imgavantage">
+                    <h3>Simplification de la Gestion Financière</h3>
+                        <p>Une plateforme unique pour centraliser la gestion des revenus… Nous avons pensé à tout pour vous faire gagner du temps.</p>
+                </div>
+
+                <div class="avantagediv2">
+                    <img src="assets/i2.PNG" alt="" class="imgavantage">
+                    <h3>Planification et Suivi des Objectifs</h3>
+                    <p>Définition d'objectifs financiers clairs avec des outils visuels pour suivre leur progression.
+                    … Nous vous aidons concrètement à faire de la croissance.</p>
+                </div>
+
+                <div class="avantagediv2">
+                    <img src="assets/i5.PNG" alt="" class="imgavantage">
+                    <h3>Conseils Financiers Intelligents</h3>
+                    <p>Suggestions personnalisées basées sur les habitudes de dépenses et revenus pour optimiser la gestion.
+                    … Nous avons créé des outils de gestion pour vous simplifier la vie.</p>
+                </div>
+
+                <div class="avantagediv2">
+                    <img src="assets/i1.PNG" alt="" class="imgavantage">
+                    <h3>Automatisation et Gain de Temps</h3>
+                    <p>Calculs, catégorisation et rappels automatisés pour simplifier les tâches répétitives… Nous pensons facilité et sécurité des paiements</p>
+                </div>
+
+                <div class="avantagediv2">
+                    <img src="assets/i3.PNG" alt="" class="imgavantage">
+                    <h3>Analyse Financière Personnalisée</h3>
+                    <p>Rapports détaillés pour mieux comprendre les finances personnelles… Nous sommes accessibles et proches de vous.</p>
+                </div>
+            </div>
+
+        </section>
+
+
+
+
+
+
+
+
+
+        <!-- =========section temoignage============= -->
+
+
+        <section id="temoignage">
+
+            <h2>Ce que disent nos utilisateurs</h2>
+
+            <div>
+                <div id="temoignagediv1">
+                    <div class="temoignagediv2">
+                        <div>
+                            <h3>AGBODJO Marie </h3>
+                        </div>
+                        <div>
+                            <p>"Cette application a complètement transformé ma façon de gérer mon argent. Je peux enfin voir clairement où va chaque sous et prendre de meilleures décisions."</p>
+                        </div>
+                        <div>
+                            <img src="assets/image.png" alt="">
+                        </div>
+                    </div>
+                    <div class="temoignagediv2">
+                        <div>
+                            <h3>GBOSSOU Jean</h3>
+                        </div>
+                        <div>
+                            <p>"Grâce aux objectifs financiers, j'ai pu  centraliser la gestion de mes renvenus. Les rapports mensuels m'ont vraiment aidé à rester motivé."</p>
+                        </div>
+                        <div>
+                            <img src="assets/image.png" alt="">
+                        </div>
+                    </div>
+                    <div class="temoignagediv2">
+                        <div>
+                            <h3>ABOSSOU Pierre</h3>
+                        </div>
+                        <div>
+                            <p>"Interface intuitive et rapports détaillés. J'apprécie particulièrement les conseils personnalisés qui m'ont permis de réduire mes dépenses superflues de 20%."</p>
+                        </div>
+                        <div>
+                            <img src="assets/image.png" alt="">
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+        
+
+
+
+
+
+
+        <!-- ===== Section call to action (a prendre le controle de vos finances) ===== -->
+
+        <section>
+            <div class="call">
+                <h1>Prêt à prendre le contrôle de vos finances?</h1>
+                <div>Rejoignez des milliers d'utlisateurs qui ont transformé leur
+                    relation avec l'argent grâce à notre plateforme.
+                </div>
+                <div>
+                <a href="#" class="bu">Commencer gratuitement</a>
+                </div>
+            </div>
+        </section>
+
+
+
+
+        <!-- ======section footer======= -->
+
+        <footer id="footer">
+            <div>
+                <ul>
+                    <li><span>logo</span><br>Gérer vos dépenses, savoir vivre</li>
+                    <li><span>Produit</span><br>Fonctionnalités<br>Tarifs<br>Témoignages<br>FAQ</li>
+                    <li><span>Ressources</span><br>Blog<br>Guides<br>Support<br>Communauté</li>
+                    <li><span>Entreprise</span><br>À propos<br>Carrières<br>Contact<br>Mentions légales</li>
+                </ul><br><br>
+                <hr>
+            </div><br>
+            <div id="container">
+                <div>
+                    <p>© 2025 Gérer vos dépenses. Tous droits réservés.</p>
+                </div>
+                <div>
+                    <a href="#"><img src="assets/fb.PNG" alt=""></a>
+                    <a href="#"><img src="assets/tw.PNG" alt=""></a>
+                    <a href="#"><img src="assets/inst.PNG" alt=""></a>
+                    <a href="#"><img src="assets/der.PNG" alt=""></a>
+                </div>
 
             </div>
             
-        </div>
+        </footer>
 
     </main>
+     
+
+
 </body>
 </html> 
 

@@ -125,11 +125,35 @@
     .connexion{
         display: flex;
         flex-wrap: wrap;
-        justify-content:space-evenly; 
+        justify-content:space-evenly;
+        align-items: center; 
     }
     .connexion img{
         margin-left: 100px;
     }
+
+@media (max-width: 768px) {
+  .connexion {
+    font-size: 3.4rem; /* Réduit légèrement la taille sur les écrans moyens */
+    width: 80%;
+     position: relative;
+    top:  10rem;
+   
+  }
+}
+@media (max-width: 768px) {
+  .connexion div img{
+    font-size: 3.4rem; /* Réduit légèrement la taille sur les écrans moyens */
+    position: relative;
+    right: 95px;
+    overflow: hidden;
+   
+  }
+}
+
+
+
+
   </style>
 </head>
 <body>
@@ -148,12 +172,8 @@
     <button type="submit">Se connecter</button>
 
     <button type="button" class="google-btn">
-      <a href="https://accounts.google.com/o/oauth2/v2/auth?
-client_id=TON_CLIENT_ID&
-redirect_uri=TON_REDIRECT_URI&
-response_type=code&
-scope=openid%20email%20profile"
-class="google-btn">
+      <a href="#"
+        class="google-btn">
   <img src="https://upload.wikimedia.org/wikipedia/commons/4/4a/Logo_2013_Google.png" alt="Google logo" style="width: 25px;">
   Continuer avec Google
 </a>
