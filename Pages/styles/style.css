@@ -17,7 +17,7 @@ body{
 #header{
    
     min-height: 100vh;
-    margin-top: 10%;
+    padding-top:10px ;
     
 }
 
@@ -30,7 +30,7 @@ body{
     font-size: 60px;
     font-weight: 400;
     margin: 16px;
-    
+       
 }
 #header .dynamic-txts{
     margin-left:20px;
@@ -148,41 +148,12 @@ body{
   color: #007bff;
   border: 2px solid #007bff ;
   position: relative;
-<<<<<<< HEAD
   z-index:0; 
   top:30px;
   
    
-=======
-  top: 30px;
->>>>>>> b4d80e53704c223b3ca71724ae9813ef7e3b0d7d
 }
 
 .bu:hover{
  background-color:#e6f0ff; 
 }
-<<<<<<< HEAD
-=======
-
-/* @media (max-width: 768px) { */
-  /* h1 { */
-    /* font-size: 24px; /* Ajuste la taille principale 
-  }
-
-  .dynamic-txts-wrapper {
-    height: 1em; /* Plus petit pour les petits écrans 
-  }
-}
-
-@media (max-width: 480px) {
-  h1 {
-    font-size: 18px;
-  }
-
-  .dynamic-txt-wrapper {
-    width: 8ch; /* Réduit la largeur des mots 
-  }
-} */
-
-
->>>>>>> b4d80e53704c223b3ca71724ae9813ef7e3b0d7d
