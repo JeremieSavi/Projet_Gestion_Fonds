@@ -1,10 +1,47 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tableau de bord</title>
     <!-- Fonction js -->
+
+    <script>
+        
+     //   function afficher_content(a){
+        //    let lui=document.querySelector('a');
+      //      lui.style.display='block'
+
+       // }   
+    
+       //Sélections des liens de la sidebar
+       const liens=document.querySelectorAll('.sidebar_tbord li');
+    
+       //Sélections des pages
+       const pages=document.querySelectorAll('.page');
+
+       liens.forEach(li => {
+                li.addEventListener('click',() =>{
+                //Cacher toutes les pages 
+                pages.forEach(p => p.classList.remove('active'));
+                //Lire l'attribut data-target du lien cliqué 
+                const idCible=li.getAttribute('data-target');
+                //Sélectionner la section correspondante
+                const pageActive=document.getElementById(idCible);
+                pageActive.classList.add('active');
+
+        });
+       });
+
+
+
+
+    </script>
+   
+
+
+
+
 
     <style>
         *{
@@ -19,7 +56,7 @@
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            width: 200px;
+            width: 200px;      
             height:100vh;
             gap:10px;
             
@@ -27,8 +64,6 @@
             top: 0;
             left: 0;
             background:rgb(228, 221, 221);
-
-
         }
         .sidebar_tbord li{
             margin:0 10px;
@@ -54,14 +89,13 @@
 
         }
 
-        .tableau_bord{
-            
+        .tableau_bord{            
             width:250px;
             border-top-left-radius: 20px;
             border-bottom-left-radius:20px;
             height:100vh;
             background:rgb(228, 221, 221);
-            padding-right: 50px;
+            padding-right:50px;
             
         }
         .tableau_bord .container{
@@ -70,7 +104,7 @@
             
             display: flex;
             justify-content:flex-start ;
-            background-color: pink;
+            background-color: rgb(192, 255, 211);
 
         }
         .div_content{
@@ -82,11 +116,11 @@
             left:200px;
             background-color: aquamarine;
         }
-        .div_accueil_tb{
+        .page{
             display:none;
-            
-            
-
+        }
+        .page.active{
+            display: block;
         }
         
             
@@ -94,7 +128,6 @@
         .div_accueil_tb{
             color: blue;
         }
-
 
     </style>
 </head>
@@ -106,43 +139,43 @@
         <div class="container" >
        
             <ul class="sidebar_tbord">
-                <li onclick="afficher_content('.div_accueil_tb')"> 
+                <li onclick="afficher_content('.div_accueil_tb')" data-target="accueil"> 
                     <span>
                         <img src="assets/page-daccueil_icon.png" alt="">
                     </span>
-                    <a href="" onclick="afficher_content('.div_accueil_tb')" >
+                    <a href="" onclick="afficher_content('.div_accueil_tb')">
                        <span> Accueil </span>
                     </a>
                 </li>
-                <li>
+                <li  data-target="depenses">
                     <span>
                         <img src="assets/depenses_icon.png" alt="">
                     </span>
 
                     <a href="" onclick="afficher_content('div_depenses_tb')">Dépenses</a>
                 </li>
-                <li>
+                <li data-target="Objectifs">
                     <span>
                         <img src="assets/objectifs-financiers_icon.png" alt="">
                     </span>
 
                     <a href="">Objectifs</a
                         ></li>
-                <li>
+                <li data-target="rapports">
                     <span>
                         <img src="assets/rapport_icone.png" alt="">
                     </span>
 
                     <a href="">Rapports</a>
                 </li>
-                <li>
+                <li data-target="conseils">
                     <span>
                         <img src="assets/conseils_icon.png" alt="">
                     </span>
 
                     <a href="">Conseils</a>
                 </li>
-                <li>
+                <li data-target="Paramètres">
                     <span>
                         <img src="assets/parametres_icon.png" alt="">
                     </span>
@@ -151,21 +184,27 @@
                 </li>
 
             </ul>
-            <div class="div_content">
-                <div class=" div_tb div_accueil_tb">
+            <div  class="div_content">
+                <div id="accueil" class="page active">
                     <h1>ACCUEIL</h1>
                 </div>
                 
-                <div class="div_tb div_depenses_tb">
+                <div  id="depenses"  class="page">
                     <h1>Ici s'affiche les dépenses</h1>
                 </div>
                 
-                <div class="div_tb div_accueil_tb">
-                    <h1>ACCUEIL</h1>
+                <div id="Objectifs" class="page">
+                    <h1>Ici c'est la page Objectifs </h1>
                 </div>
                 
-                <div class="div_tb div_accueil_tb">
-                    <h1>ACCUEIL</h1>
+                <div id="rapports" class="page">
+                    <h1> Ici c'est la page Rapports</h1>
+                </div>
+                <div  id="conseils" class="page">
+                    <h1> Ici c'est la page Conseils</h1>
+                </div>
+                <div id="Paramètres" class="page">
+                    <h1> Ici c'est la page Paramètres</h1>
                 </div>
                 
 
@@ -173,13 +212,6 @@
                      
        </div>
 
-            <script>
-        function afficher_content(a){
-            let lui=document.querySelector('a');
-            lui.style.display='block'
-
-        }    
-    </script>
-   
+      
 </body>
 </html>

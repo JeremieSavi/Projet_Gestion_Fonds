@@ -80,7 +80,8 @@ body{
     padding-right: 10px;
     padding-top: 10px;
     padding-bottom: 50px;
-    background-color: #e1e4f5;
+    background-color:rgba(255, 255, 255);
+
     color: #302f85;
 
 }
@@ -91,6 +92,9 @@ body{
     justify-content: center;
     align-items: center;
     gap: 20px;
+}
+#avantage h2 span {
+    color:#007bff;
 }
 .avantagediv2{
     padding: 15px;
