@@ -4,183 +4,73 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tableau de bord</title>
-    <!-- Fonction js -->
 
-    <script>
-        
-     //   function afficher_content(a){
-        //    let lui=document.querySelector('a');
-      //      lui.style.display='block'
-
-       // }   
+    <!--Liaison avec le fichier css -->    
+    <link rel="stylesheet" href="styles/style_tableau_bord.css">
     
-       //Sélections des liens de la sidebar
-       const liens=document.querySelectorAll('.sidebar_tbord li');
-    
-       //Sélections des pages
-       const pages=document.querySelectorAll('.page');
-
-       liens.forEach(li => {
-                li.addEventListener('click',() =>{
-                //Cacher toutes les pages 
-                pages.forEach(p => p.classList.remove('active'));
-                //Lire l'attribut data-target du lien cliqué 
-                const idCible=li.getAttribute('data-target');
-                //Sélectionner la section correspondante
-                const pageActive=document.getElementById(idCible);
-                pageActive.classList.add('active');
-
-        });
-       });
-
-
-
-
-    </script>
-   
-
-
-
-
-
-    <style>
-        *{
-            padding: 0;
-            margin: 0;
-            box-sizing: border-box;
-            text-decoration: none;
-            list-style:none;
-        }
-        .sidebar_tbord{
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            width: 200px;      
-            height:100vh;
-            gap:10px;
-            
-            position: fixed;
-            top: 0;
-            left: 0;
-            background:rgb(228, 221, 221);
-        }
-        .sidebar_tbord li{
-            margin:0 10px;
-            margin-right:10px;
-            width: 90%;
-            padding: 5px ;
-            border-radius: 10px;
-
-            background-color: white;
-            display: flex;
-            align-items:center;
-            transition:background .4s;
-           
-        }
-        .sidebar_tbord li:hover{
-            background-color:rgb(26, 231, 231);
-        }
-        .sidebar_tbord li img{
-            width: 30px;
-            height:30px;
-            margin-right: 30px;
-
-
-        }
-
-        .tableau_bord{            
-            width:250px;
-            border-top-left-radius: 20px;
-            border-bottom-left-radius:20px;
-            height:100vh;
-            background:rgb(228, 221, 221);
-            padding-right:50px;
-            
-        }
-        .tableau_bord .container{
-            width: 100VW;
-            height: 100vh;
-            
-            display: flex;
-            justify-content:flex-start ;
-            background-color: rgb(192, 255, 211);
-
-        }
-        .div_content{
-            width:70vw;
-            height:100vh;
-            position: absolute;
-            top: 0;
-            right: 0;
-            left:200px;
-            background-color: aquamarine;
-        }
-        .page{
-            display:none;
-        }
-        .page.active{
-            display: block;
-        }
-        
-            
-        
-        .div_accueil_tb{
-            color: blue;
-        }
-
-    </style>
 </head>
+<style>
+    .essai{
+        background-color:blue ;
+        width: 20px;
+        height: 20px;
+        margin:400px;
+        color: white;
+    }
+</style>
 <body>
 <div>
 
 </div>
     <div class="tableau_bord">
         <div class="container" >
-       
+            
+
+        
             <ul class="sidebar_tbord">
+                <span class="span_switch" ><img src="assets/icon_switch.png" class="icon_switch" alt=""></span>
                 <li onclick="afficher_content('.div_accueil_tb')" data-target="accueil"> 
                     <span>
                         <img src="assets/page-daccueil_icon.png" alt="">
                     </span>
-                    <a href="" onclick="afficher_content('.div_accueil_tb')">
+                    <a href="" class="text" onclick="afficher_content('.div_accueil_tb')">
                        <span> Accueil </span>
                     </a>
-                </li>
+                </li>                
                 <li  data-target="depenses">
                     <span>
                         <img src="assets/depenses_icon.png" alt="">
                     </span>
 
-                    <a href="" onclick="afficher_content('div_depenses_tb')">Dépenses</a>
+                    <a href="" class="text" onclick="afficher_content('div_depenses_tb')">Dépenses</a>
                 </li>
                 <li data-target="Objectifs">
                     <span>
                         <img src="assets/objectifs-financiers_icon.png" alt="">
                     </span>
 
-                    <a href="">Objectifs</a
+                    <a href="" class="text">Objectifs</a
                         ></li>
                 <li data-target="rapports">
                     <span>
                         <img src="assets/rapport_icone.png" alt="">
                     </span>
 
-                    <a href="">Rapports</a>
+                    <a href="" class="text">Rapports</a>
                 </li>
                 <li data-target="conseils">
                     <span>
                         <img src="assets/conseils_icon.png" alt="">
                     </span>
 
-                    <a href="">Conseils</a>
+                    <a href="" class="text">Conseils</a>
                 </li>
                 <li data-target="Paramètres">
                     <span>
                         <img src="assets/parametres_icon.png" alt="">
                     </span>
 
-                    <a href="">Paramètres</a>
+                    <a href="" class="text">Paramètres</a>
                 </li>
 
             </ul>
@@ -206,12 +96,15 @@
                 <div id="Paramètres" class="page">
                     <h1> Ici c'est la page Paramètres</h1>
                 </div>
+                        <a class="essai"onclick="f()" >Cliquez moi</a>
+
                 
 
             </div>
                      
        </div>
-
+    <!-- Liaison avec le fichier JavaScript  -->
+    <script language="Javascript" src="Script_javaScript/script_tableau_bord.js"></script>
       
 </body>
 </html>
