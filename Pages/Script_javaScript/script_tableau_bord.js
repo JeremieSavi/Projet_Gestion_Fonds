@@ -2,11 +2,7 @@
 
     
      /*   
-      function afficher_content(a){
-            let lui=document.querySelector('a');
-            lui.style.display='block'
-
-     }   
+     
     
         Sélections des liens de la sidebar
     const liens=document.querySelectorAll('.sidebar_tbord li');
@@ -31,6 +27,36 @@ let sidebar=document.querySelector('.sidebar_tbord');
 let boutton_switch=document.querySelector('.icon_switch');
 boutton_switch.addEventListener('click',function(){
     sidebar.classList.toggle('close');
+});
+
+
+//Affichage dynamique 
+/*let pages =document.querySelectorAll('.page');
+ function afficher_content(a){
+    let lui=document.querySelector('a');
+    pages.forEach(p => {
+        p.classList.remove('active')
+    });
+
+    lui.classList.add('active');
+};
+*/
+//Affichage dynamique 
+//Séléction des pages et des bouttons 
+let liens = document.querySelectorAll('.sidebar_tbord li');
+let pages = document.querySelectorAll('.page');
+
+liens.forEach(lien => {
+    lien.addEventListener('click',() => {
+        const idCible=lien.getAttribute('data-target');
+        pages.forEach(page => {
+            page.classList.remove('active')
+        });
+        let elementCible=document.getElementById(idCible);
+        elementCible.classList.add('active');
+
+
+    });
 });
 
 

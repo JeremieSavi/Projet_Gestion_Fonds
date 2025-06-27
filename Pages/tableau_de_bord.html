@@ -17,15 +17,17 @@
     <div class="tableau_bord">
         <div class="container" >
             
-
+            <div class="header_tbord">
+                <span>FM</span> 
+            </div>
         
             <ul class="sidebar_tbord">
                 <span class="span_switch" ><img src="assets/icon_switch.png" class="icon_switch" alt=""></span>
-                <li onclick="afficher_content('.div_accueil_tb')" data-target="accueil"> 
+                <li data-target="accueil"> 
                     <span>
                         <img src="assets/page-daccueil_icon.png" alt="">
                     </span>
-                    <a href="" class="text" onclick="afficher_content('.div_accueil_tb')">
+                    <a href="" class="text">
                        <span> Accueil </span>
                     </a>
                 </li>                
@@ -34,69 +36,79 @@
                         <img src="assets/depenses_icon.png" alt="">
                     </span>
 
-                    <a href="" class="text" onclick="afficher_content('div_depenses_tb')">Dépenses</a>
+                    <a  class="text" >Dépenses</a>
                 </li>
                 <li data-target="Objectifs">
                     <span>
                         <img src="assets/objectifs-financiers_icon.png" alt="">
                     </span>
 
-                    <a href="" class="text">Objectifs</a
-                        ></li>
+                    <a class="text">Objectifs</a>
+                </li>
                 <li data-target="rapports">
                     <span>
                         <img src="assets/rapport_icone.png" alt="">
                     </span>
 
-                    <a href="" class="text">Rapports</a>
+                    <a class="text">Rapports</a>
                 </li>
                 <li data-target="conseils">
                     <span>
                         <img src="assets/conseils_icon.png" alt="">
                     </span>
 
-                    <a href="" class="text">Conseils</a>
+                    <a class="text">Conseils</a>
                 </li>
                 <li data-target="Paramètres">
                     <span>
                         <img src="assets/parametres_icon.png" alt="">
                     </span>
 
-                    <a href="" class="text">Paramètres</a>
+                    <a  class="text">Paramètres</a>
                 </li>
 
             </ul>
             <div  class="div_content">
-                <div id="accueil" class="page active">
+                <div id="accueil" class="page active div_accueil_tb">
                     <h1>ACCUEIL</h1>
+                    <h2>Bienvenue sur votre tableau de bord👋</h2>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Modi nemo odio repellat ratione deserunt eveniet numquam eaque distinctio ea, porro facilis ab dolore, vel, est unde dolores. Consectetur, officiis dolorum.</p>
                 </div>
                 
-                <div  id="depenses"  class="page">
+                <div  id="depenses"  class="page div_depenses_tb">
                     <h1>Ici s'affiche les dépenses</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis dolorem vitae culpa. Non deleniti laboriosam, pariatur, placeat soluta quo iste id ullam doloremque
+                         quis recusandae praesentium obcaecati tempora reprehenderit eius.</p>
                 </div>
                 
                 <div id="Objectifs" class="page">
                     <h1>Ici c'est la page Objectifs </h1>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cumque cupiditate pariatur, quae tempore provident
+                         blanditiis ipsum reprehenderit eligendi aliquam deleniti sit nostrum commodi totam quidem porro maiores quia inventore sunt?</p>
                 </div>
                 
                 <div id="rapports" class="page">
                     <h1> Ici c'est la page Rapports</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consequatur itaque incidunt a quia at doloremque repellat ab sed iure soluta, consectetur porro officia iste. Delectus neque quo provident nesciunt quos!</p>
                 </div>
                 <div  id="conseils" class="page">
                     <h1> Ici c'est la page Conseils</h1>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facilis, commodi rerum? Nesciunt atque quas similique, ducimus nulla eos consectetur libero repellat recusandae rem 
+                        facilis, laudantium neque aliquam voluptatum. Cumque, praesentium.</p>
                 </div>
                 <div id="Paramètres" class="page">
                     <h1> Ici c'est la page Paramètres</h1>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Corrupti, animi. Obcaecati rem natus voluptatum deleniti recusandae? Sit quibusdam asperiores elig
+                        endi iste nisi autem ipsum? Quas aliquid facilis harum reprehenderit possimus?</p>
                 </div>
-                        <a class="essai"onclick="f()" >Cliquez moi</a>
-
+                       
                 
 
             </div>
                      
        </div>
     <!-- Liaison avec le fichier JavaScript  -->
-    <script language="Javascript" src="Script_javaScript/script_tableau_bord.js"></script>
+    <script  src="Script_javaScript/script_tableau_bord.js"></script>
       
 </body>
 </html>
