@@ -11,7 +11,7 @@
         .sidebar_tbord{
             display: flex;
             flex-direction: column;
-            justify-content: center;
+            justify-content:;
             align-items: center;
             z-index:100;
             width: 200px;      
@@ -134,4 +134,26 @@
     }
     .sidebar_tbord.close .text{
         opacity: 0;
+    }
+
+    .header_tbord span h2{
+        color:#007bff;
+    }
+    .header_tbord{
+        display: flex;
+        justify-content:space-evenly;
+        padding:20px;
+        align-items:center;
+    }
+
+    .sidebar_tbord li:last-child{
+        margin-top:40px;
+
+    }
+    .sidebar_tbord li:last-child:hover{
+        color: white;
+        background-color: red;
+    }
+    .text.h2{
+        display: none;
     }
