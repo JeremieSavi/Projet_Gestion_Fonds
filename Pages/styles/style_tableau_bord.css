@@ -42,9 +42,7 @@
         .sidebar_tbord li:hover a{
             color: white;
         }
-        .sidebar_tbord li:hover span img{
-            background-color:;
-        }
+        
         .sidebar_tbord li img{
             width: 30px;
             height:30px;
@@ -79,7 +77,7 @@
             top: 0;
             right: 0;
             left:200px;
-            background-color:;
+            
         }
         /*Affichage dynamique */
         .page{
@@ -157,3 +155,13 @@
     .text.h2{
         display: none;
     }
+
+
+
+/*Style de la section dépenses du tableau de bord */
+
+
+    
+    
+    
+                            

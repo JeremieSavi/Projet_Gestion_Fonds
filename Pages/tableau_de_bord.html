@@ -8,6 +8,7 @@
     <!--Liaison avec le fichier css -->    
     <link rel="stylesheet" href="styles/style_tableau_bord.css">
     
+    
 </head>
 
 <body>
@@ -70,9 +71,8 @@
                 </li>
                 <li class="déconnexion" onclick="alert('Vous voulez vous déconnecter apparement ')">
                     <span>
-
                     </span>
-                    <a >Deconnexion</a>
+                    <a  class="text">Deconnexion</a>
                 </li>
 
             </ul>
@@ -83,11 +83,44 @@
                     <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Modi nemo odio repellat ratione deserunt eveniet numquam eaque distinctio ea, porro facilis ab dolore, vel, est unde dolores. Consectetur, officiis dolorum.</p>
                 </div>
                 
-                <div  id="depenses"  class="page div_depenses_tb">
-                    <h1>Ici s'affiche les dépenses</h1>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis dolorem vitae culpa. Non deleniti laboriosam, pariatur, placeat soluta quo iste id ullam doloremque
-                         quis recusandae praesentium obcaecati tempora reprehenderit eius.</p>
-                </div>
+                        <div  id="depenses"  class="page div_depenses_tb">
+                            <!-- Section depenses -->
+                            <h1>Gestion des Dépenses</h1>
+
+                            <form id="formDepense" style="display: flex; flex-wrap: wrap; gap: 15px; margin-top: 20px; margin-bottom: 30px;">
+                                <input type="text" id="description" placeholder="Description" required style="flex:1; padding:10px; border:1px solid #ccc; border-radius:5px;">
+                                <input type="number" id="montant" placeholder="Montant (FCFA)" required style="flex:1; padding:10px; border:1px solid #ccc; border-radius:5px;">
+                                <input type="date" id="date" required style="flex:1; padding:10px; border:1px solid #ccc; border-radius:5px;">
+                                <select id="categorie" required style="flex:1; padding:10px; border:1px solid #ccc; border-radius:5px;">
+                                    <option value="">-- Catégorie --</option>
+                                    <option value="Logement">Logement</option>
+                                    <option value="Électricité">Électricité</option>
+                                    <option value="Santé">Santé</option>
+                                    <option value="Connexion">Connexion</option>
+                                    <option value="Alimentation">Alimentation</option>
+                                    <option value="Loisir">Loisir</option>
+                                    <option value="Autre">Autre</option>
+                                </select>
+                                <button type="submit" style="padding: 10px 20px; background-color: #007bff; border: none; color: white; border-radius: 5px; cursor: pointer;">Ajouter Dépense</button>
+                            </form>
+
+                            <table id="tableDepenses" style="width: 100%; border-collapse: collapse;">
+                            <thead>
+                                <tr style="background-color: #007bff; color: white;">
+                                <th style="padding: 10px;">Description</th>
+                                <th style="padding: 10px;">Montant</th>
+                                <th style="padding: 10px;">Date</th>
+                                <th style="padding: 10px;">Catégorie</th>
+                                <th style="padding: 10px;">Action</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <!-- Dépenses insérées ici -->
+                            </tbody>
+                            </table>
+
+                                    
+                        </div>
                 
                 <div id="Objectifs" class="page">
                     <h1>Ici c'est la page Objectifs </h1>

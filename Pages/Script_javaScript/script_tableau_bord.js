@@ -1,27 +1,7 @@
   //Fonction js 
 
     
-     /*   
-     
     
-        Sélections des liens de la sidebar
-    const liens=document.querySelectorAll('.sidebar_tbord li');
-    
-    Sélections des pages   const pages=document.querySelectorAll('.page');    liens.forEach(li =>              li.addEventListener('click',() =>             //Cacher toutes les pages             pages.forEach(p => p.classList.remove('active'))             //Lire l'attribut data-target du lien cliqué             const idCible=li.getAttribute('data-target')             //Sélectionner la section correspondant             const pageActive=document.getElementById(idCible)             pageActive.classList.add('active');
-
-        });
-        });
-
-       Code javascript pour cacher ou fait apparaître la sidebar 
-
-    let boutton_switch = document.querySelector('.icon_switch');
-   
-    */
-   /* boutton_switch.addEventListener('click', () =>{
-        alert("hello")
-    
-    });
-  */
  //Code pour cacher ou afficher la sidebar 
 let sidebar=document.querySelector('.sidebar_tbord');
 let boutton_switch=document.querySelector('.icon_switch');
@@ -30,17 +10,7 @@ boutton_switch.addEventListener('click',function(){
 });
 
 
-//Affichage dynamique 
-/*let pages =document.querySelectorAll('.page');
- function afficher_content(a){
-    let lui=document.querySelector('a');
-    pages.forEach(p => {
-        p.classList.remove('active')
-    });
 
-    lui.classList.add('active');
-};
-*/
 //Affichage dynamique 
 //Séléction des pages et des bouttons 
 let liens = document.querySelectorAll('.sidebar_tbord li');
@@ -61,3 +31,56 @@ liens.forEach(lien => {
 
 
    
+//Script Js de la section dépenses du tableau de bord 
+
+
+
+document.addEventListener('DOMContentLoaded', () => {
+  const formDepense = document.getElementById('formDepense');
+  const tableBody = document.querySelector('#tableDepenses tbody');
+  let depenses = [];
+
+  formDepense.addEventListener('submit', (e) => {
+    e.preventDefault();
+
+    const description = document.getElementById('description').value;
+    const montant = document.getElementById('montant').value;
+    const date = document.getElementById('date').value;
+    const categorie = document.getElementById('categorie').value;
+
+    const depense = {
+      id: Date.now(),
+      description,
+      montant,
+      date,
+      categorie
+    };
+
+    depenses.push(depense);
+    ajouterDepenseDansTable(depense);
+    formDepense.reset();
+  });
+
+  function ajouterDepenseDansTable(depense) {
+    const tr = document.createElement('tr');
+
+    tr.innerHTML = `
+      <td style="padding:10px;">${depense.description}</td>
+      <td style="padding:10px;">${depense.montant}</td>
+      <td style="padding:10px;">${depense.date}</td>
+      <td style="padding:10px;">${depense.categorie}</td>
+      <td style="padding:10px;">
+        <button onclick="supprimerDepense(${depense.id})" style="padding:5px 10px; background-color: red; color: white; border: none; border-radius: 4px; cursor: pointer;">Supprimer</button>
+      </td>
+    `;
+    tr.setAttribute('data-id', depense.id);
+    tableBody.appendChild(tr);
+  }
+
+  window.supprimerDepense = (id) => {
+    depenses = depenses.filter(dep => dep.id !== id);
+    const row = document.querySelector(`tr[data-id="${id}"]`);
+    if (row) row.remove();
+  };
+});
+

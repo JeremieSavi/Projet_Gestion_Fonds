@@ -170,6 +170,8 @@ body{
 }
 
 /* ===========footer=========== */
+
+/* ===========footer=========== */
 #footer{
     padding-top: 100px;
     background-color: #1f2937;
@@ -178,21 +180,27 @@ body{
     padding-left: 60px;
     padding-right: 60px;
 }
-#footer ul{
+#footerdiv1{
+    position: relative;
     display: flex;
+    justify-content: space-between;
+   
+}
+#footer ul{
+    /* display: flex; */
     gap: 100px;
     justify-content: center;
 }
-#footer span{
+/* #footer span{
     color: rgb(255, 255, 255);
-}
+} */
 #footer ul li{
     color: #99a5b6;
     list-style: none;
 }
 #footer ul li:hover{
     color: rgb(255, 255, 255);
-}
+} 
 #container{
     display: flex;
     justify-content: space-between;
@@ -204,13 +212,13 @@ body{
 
 }
 @media (max-width: 800px) {
-    #footer ul{
+    /* #footer ul{
     display: flex;
     flex-direction: column;
     gap: 10px;
     justify-content: center;
-
-}
+    
+} */
     #container{
         display: flex;
         flex-direction: column;
@@ -218,4 +226,13 @@ body{
         align-items: center;
         padding-bottom: 30px;
     }
+
+    #footerdiv1{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+   
+    }
 }
+
